@@ -1,0 +1,14 @@
+node_modules/
+ngrok
+ngrok.zip
+.DS_Store
+dump.rdb
+
+gitlab_ssh_key
+*.pub
+*.pem
+*env/
+*.env
+coverage/
+logs/
+*.log

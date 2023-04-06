@@ -1,0 +1,69 @@
+service: text-to-pay-api
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+custom:
+  serverless-offline:
+    httpPort: 7000
+    noPrependStageInUrl: true
+
+  dotenv:
+    basePath: ./env/
+
+  stage: ${env:STAGE}
+  region: ${env:REGION}
+
+  prod:
+    GATEWAY_URL:
+      {
+        "Fn::Join":
+          [
+            "",
+            [
+              "https://",
+              { "Ref": "ApiGatewayRestApi" },
+              ".execute-api.${self:custom.region}.amazonaws.com/${self:custom.stage}",
+            ],
+          ],
+      }
+
+  staging:
+    GATEWAY_URL:
+      {
+        "Fn::Join":
+          [
+            "",
+            [
+              "https://",
+              { "Ref": "ApiGatewayRestApi" },
+              ".execute-api.${self:custom.region}.amazonaws.com/${self:custom.stage}",
+            ],
+          ],
+      }
+
+  dev:
+    GATEWAY_URL: "http://localhost:7000"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${self:custom.stage}
+  region: us-east-1
+  memorySize: 512
+  environment:
+    GATEWAY_URL: ${self:custom.${self:custom.stage}.GATEWAY_URL}
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
