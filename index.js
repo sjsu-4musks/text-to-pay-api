@@ -69,9 +69,11 @@ app.use(
 );
 
 const users = require("./src/api/v1/users");
+const merchant = require("./src/api/v1/merchant");
 
 // ROUTES
 app.use("/v1/users", users);
+app.use("/v1/merchant", merchant);
 
 app.get("/", (req, res) => {
   res.status(200).json({ success: true, message: "Howdy!!!" });
