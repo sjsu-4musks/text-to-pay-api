@@ -1,0 +1,19 @@
+const ItemType = {
+  PRODUCT: "PRODUCT",
+  PLAN: "PLAN",
+  BMPL: "BMPL",
+  COMMUNITY_CART: "COMMUNITY_CART"
+};
+
+const ItemStatus = {
+  PUBLISHED: "PUBLISHED",
+  UN_PUBLISHED: "UN_PUBLISHED"
+};
+
+const PlanType = {
+  UNLIMITED_OFFERING: "UNLIMITED_OFFERING",
+  QUANTITY_LIMIT: "QUANTITY_LIMIT",
+  MONTHLY_DISCOUNT: "MONTHLY_DISCOUNT"
+};
+
+module.exports = { ItemType, ItemStatus, PlanType };
