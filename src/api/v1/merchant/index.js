@@ -6,6 +6,7 @@ const router = express.Router();
 
 const alerts = require("./alerts");
 const customers = require("./customers");
+const discounts = require("./discounts");
 
 const UsersModel = require("../../../models/Users");
 const MerchantsModel = require("../../../models/Merchants");
@@ -22,6 +23,7 @@ const logger = require("../../../utils/logger");
 
 router.use("/alerts", alerts);
 router.use("/customers", customers);
+router.use("/discounts", discounts);
 
 router.get("/", async (req, res) => {
   try {
