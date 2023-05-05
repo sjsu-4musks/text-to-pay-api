@@ -5,10 +5,12 @@ const { nanoid } = require("nanoid");
 const router = express.Router();
 
 const members = require("./members");
+const orders = require("./orders");
+const stats = require("./stats");
 const alerts = require("./alerts");
+const products = require("./products");
 const customers = require("./customers");
 const discounts = require("./discounts");
-const products = require("./products");
 
 const UsersModel = require("../../../models/Users");
 const MerchantsModel = require("../../../models/Merchants");
@@ -21,13 +23,16 @@ const {
 const { createSalt, hashPassword, encodeJWT } = require("../../../utils/jwt");
 const { validateToken } = require("../../../utils/common");
 const { INTERNAL_SERVER_ERROR_MESSAGE } = require("../../../constants/App");
+const { ProcessingFeesType } = require("../../../constants/Payments");
 const logger = require("../../../utils/logger");
 
 router.use("/members", members);
+router.use("/orders", orders);
+router.use("/stats", stats);
 router.use("/alerts", alerts);
+router.use("/products", products);
 router.use("/customers", customers);
 router.use("/discounts", discounts);
-router.use("/products", products);
 
 router.get("/", async (req, res) => {
   try {
@@ -126,6 +131,11 @@ router.post("/onboard", async (req, res) => {
 
     const hashedPassword = hashPassword(password, createSalt());
 
+    const newMerchant = await MerchantsModel({
+      businessName,
+      processingFeesType: ProcessingFeesType.MERCHANT
+    }).save();
+
     const newUser = await new UsersModel({
       firstName,
       lastName,
@@ -136,6 +146,7 @@ router.post("/onboard", async (req, res) => {
         .createHash("md5")
         .update(email)
         .digest("hex"),
+      merchant: newMerchant._id,
       status: UserStatus.ACTIVE,
       type: UserTypes.MERCHANT
     }).save();
@@ -346,6 +357,20 @@ router.put("/processing-fees-type", async (req, res) => {
     }
 
     const { merchant } = token.user;
+
+    const { processingFeesType } = req.body;
+
+    if (!processingFeesType) {
+      return res.status(400).json({
+        success: false,
+        message: "Processing fees type is required."
+      });
+    }
+
+    await MerchantsModel.findOneAndUpdate(
+      { _id: merchant._id },
+      { processingFeesType }
+    );
 
     return res.status(200).json({
       success: true,

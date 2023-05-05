@@ -12,3 +12,4 @@ gitlab_ssh_key
 coverage/
 logs/
 *.log
+*.bak
