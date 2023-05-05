@@ -4,6 +4,7 @@ const { nanoid } = require("nanoid");
 
 const router = express.Router();
 
+const members = require("./members");
 const alerts = require("./alerts");
 const customers = require("./customers");
 const discounts = require("./discounts");
@@ -22,6 +23,7 @@ const { validateToken } = require("../../../utils/common");
 const { INTERNAL_SERVER_ERROR_MESSAGE } = require("../../../constants/App");
 const logger = require("../../../utils/logger");
 
+router.use("/members", members);
 router.use("/alerts", alerts);
 router.use("/customers", customers);
 router.use("/discounts", discounts);
