@@ -118,18 +118,12 @@ router.post("/signup/email", async (req, res) => {
 
 router.post("/signin/email", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email } = req.body;
 
     if (!email) {
       return res
         .status(400)
         .json({ success: false, message: "Email is required." });
-    }
-
-    if (!password) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Password is required." });
     }
 
     const user = await UsersModel.findOne({ email }).populate(
@@ -144,23 +138,11 @@ router.post("/signin/email", async (req, res) => {
       });
     }
 
-    const salt = user.password.split("$")[0];
-
-    const hashedPassword = hashPassword(password, salt);
-
-    if (hashedPassword !== user.password) {
-      return res.status(403).json({
-        success: false,
-        message: "Incorrect password. Please try again."
-      });
-    }
-
     const token = encodeJWT({ userId: user._id });
 
     return res.status(200).json({ success: true, data: { user, token } });
   } catch (error) {
     logger.error("POST /api/v1/users/signin/email -> error : ", error);
-
     return res
       .status(500)
       .json({ success: false, message: INTERNAL_SERVER_ERROR_MESSAGE });
@@ -249,7 +231,7 @@ router.post("/verify-otp", async (req, res) => {
           .json({ success: false, message: "Merchant does not exist." });
       }
 
-      redirectUrl = `https://app.${APP_HOST_URL}/menu?mId=${merchant._id}`;
+      redirectUrl = `https://${APP_HOST_URL}/menu?mId=${merchant._id}`;
     }
 
     const savedOtp = await OTPModel.findOne({

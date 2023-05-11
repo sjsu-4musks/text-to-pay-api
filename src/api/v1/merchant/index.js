@@ -20,7 +20,7 @@ const {
   UserStatus,
   UserTypes
 } = require("../../../constants/Users");
-const { createSalt, hashPassword, encodeJWT } = require("../../../utils/jwt");
+const { encodeJWT } = require("../../../utils/jwt");
 const { validateToken } = require("../../../utils/common");
 const { INTERNAL_SERVER_ERROR_MESSAGE } = require("../../../constants/App");
 const { ProcessingFeesType } = require("../../../constants/Payments");
@@ -68,14 +68,7 @@ router.get("/", async (req, res) => {
 
 router.post("/onboard", async (req, res) => {
   try {
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      confirmPassword,
-      businessName
-    } = req.body;
+    const { firstName, lastName, email, businessName } = req.body;
 
     if (!firstName) {
       return res
@@ -95,24 +88,6 @@ router.post("/onboard", async (req, res) => {
         .json({ success: false, message: "Email is required." });
     }
 
-    if (!password) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Password is required." });
-    }
-
-    if (!confirmPassword) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Confirm password is required." });
-    }
-
-    if (password !== confirmPassword) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Passwords do not match." });
-    }
-
     if (!businessName) {
       return res.status(400).json({
         success: false,
@@ -129,8 +104,6 @@ router.post("/onboard", async (req, res) => {
       });
     }
 
-    const hashedPassword = hashPassword(password, createSalt());
-
     const newMerchant = await MerchantsModel({
       businessName,
       processingFeesType: ProcessingFeesType.MERCHANT
@@ -140,7 +113,6 @@ router.post("/onboard", async (req, res) => {
       firstName,
       lastName,
       email,
-      password: hashedPassword,
       role: UserRoles.ADMIN,
       avatar: crypto
         .createHash("md5")

@@ -72,12 +72,14 @@ const users = require("./src/api/v1/users");
 const merchant = require("./src/api/v1/merchant");
 const payments = require("./src/api/v1/payments");
 const stripeWebhooks = require("./src/api/v1/webhooks/stripe");
+const twilioWebhooks = require("./src/api/v1/webhooks/twilio");
 
 // ROUTES
 app.use("/v1/users", users);
 app.use("/v1/merchant", merchant);
 app.use("/v1/payments", payments);
 app.use("/v1/webhooks/stripe", stripeWebhooks);
+app.use("/v1/webhooks/twilio", twilioWebhooks);
 
 app.get("/", (req, res) => {
   res.status(200).json({ success: true, message: "Howdy!!!" });

@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
 const UsersModel = require("../models/Users");
-const MerchantsModel = require("../models/Merchants");
 
 const { decodeJWT } = require("./jwt");
-
-const { CUSTOMER_PLATFORM_SUBDOMAIN } = require("../constants/App");
 
 const newId = () => mongoose.Types.ObjectId();
 

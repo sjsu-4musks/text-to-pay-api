@@ -1,12 +1,7 @@
-const moment = require("moment-timezone");
-const { nanoid } = require("nanoid");
-
 const MerchantsModel = require("../../models/Merchants");
 const CustomersModel = require("../../models/Customers");
 const OrdersModel = require("../../models/Orders");
 const CartModel = require("../../models/Cart");
-const ProductsModel = require("../../models/Products");
-const DiscountsModel = require("../../models/Discounts");
 const AlertsModel = require("../../models/Alerts");
 const {
   createCustomer,
@@ -14,27 +9,19 @@ const {
   createPaymentMethod,
   attachPaymentMethod,
   listPaymentMethods,
-  createSubscription,
-  createPaymentIntent,
-  createPrice,
-  transferFunds
+  createPaymentIntent
 } = require("../stripe");
 const {
   PurchaseType,
-  ProcessingFeesType,
-  getPaymentSchedule
+  ProcessingFeesType
 } = require("../../constants/Payments");
 const {
   OrderStatus,
   OrderScheduleType,
   OrderType
 } = require("../../constants/Orders");
-const { PaymentSchedules } = require("../../constants/Payments");
-const { ItemType } = require("../../constants/Products");
 const { AlertType } = require("../../constants/Alerts");
 const logger = require("../../utils/logger");
-const { MenuType } = require("../../constants/Menu");
-const { DiscountType } = require("../../constants/Discounts");
 
 const createCustomerOrder = async ({
   merchantId,
@@ -205,111 +192,17 @@ const createCustomerOrder = async ({
       const item = items[i];
 
       const {
-        product: productId,
-        discount: discountId = null,
-        menuType,
-        price: {
-          purchaseType,
-          totalAmount,
-          amount,
-          quantity,
-          variation,
-          modifiers
-        }
+        price: { purchaseType, totalAmount }
       } = item;
 
-      const product = await ProductsModel.findById(productId).populate(
-        "merchant"
-      );
+      if (purchaseType === PurchaseType.ONE_TIME) {
+        consolidatedAmount += Number(totalAmount);
 
-      let discount = null;
+        const payload = {
+          ...item
+        };
 
-      if (discountId) {
-        discount = await DiscountsModel.findById(discountId).populate(
-          "products"
-        );
-      }
-
-      if (menuType === MenuType.COMMUNITY_CART) {
-        const platformPaymentIntentResponse = await createPaymentIntent({
-          customer: platformCustomerId,
-          amount: parseFloat((totalAmount * 100).toFixed(2)), // convert to cents,
-          paymentMethodId
-        });
-
-        logger.debug(
-          "platformPaymentIntentResponse : ",
-          platformPaymentIntentResponse
-        );
-
-        if (platformPaymentIntentResponse && platformPaymentIntentResponse.id) {
-          const sellerMerchantAmount = Number(totalAmount) * 0.25;
-
-          const sellerMerchantTransferResponse = await transferFunds({
-            amount: parseFloat((sellerMerchantAmount * 100).toFixed(2)), // convert to cents,
-            stripeAccount: merchant.stripeAccountId
-          });
-
-          logger.debug(
-            "sellerMerchantTransferResponse : ",
-            sellerMerchantTransferResponse
-          );
-
-          const { merchant: originalMerchant } = product;
-
-          const originalMerchantAmount = Number(totalAmount) * 0.5;
-
-          const originalMerchantTransferResponse = await transferFunds({
-            amount: parseFloat((originalMerchantAmount * 100).toFixed(2)), // convert to cents,
-            stripeAccount: originalMerchant.stripeAccountId
-          });
-
-          logger.debug(
-            "originalMerchantTransferResponse : ",
-            originalMerchantTransferResponse
-          );
-
-          processedItems.push({
-            ...item,
-            stripeMetadata: {
-              platformPaymentIntentId: platformPaymentIntentResponse.id,
-              totalAmount,
-              sellerMerchantTransferId: sellerMerchantTransferResponse.id,
-              sellerMerchantAmount,
-              originalMerchantTransferId: originalMerchantTransferResponse.id,
-              originalMerchantAmount,
-              paymentMethodId
-            }
-          });
-        }
-      }
-
-      if (menuType !== MenuType.COMMUNITY_CART) {
-        if (
-          purchaseType === PurchaseType.ONE_TIME ||
-          purchaseType === PurchaseType.BUY_MORE_PAY_LESS
-        ) {
-          let purchaseAmount = Number(totalAmount);
-
-          if (discount) {
-            if (discount.discountType === DiscountType.PERCENTAGE) {
-              purchaseAmount -=
-                purchaseAmount * (Number(discount.discountAmount) / 100);
-            }
-
-            if (discount.discountType === DiscountType.AMOUNT) {
-              purchaseAmount -= Number(discount.discountAmount);
-            }
-          }
-
-          consolidatedAmount += purchaseAmount;
-
-          const payload = {
-            ...item
-          };
-
-          processedItems.push(payload);
-        }
+        processedItems.push(payload);
       }
     }
 
