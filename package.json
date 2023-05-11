@@ -5,10 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "env-cmd -f ./env/.env sls offline",
-    "staging": "env-cmd -f ./env/.env.staging sls offline",
-    "prod": "env-cmd -f ./env/.env.prod sls offline",
-    "deploy:staging": "sls deploy --env staging",
-    "deploy:prod": "sls deploy --env prod",
+    "deploy": "env-cmd -f ./env/.env.prod sls deploy",
     "lint": "eslint --ext .js .",
     "prettier": "prettier --write './**/*.js'"
   },

@@ -231,7 +231,7 @@ router.post("/verify-otp", async (req, res) => {
           .json({ success: false, message: "Merchant does not exist." });
       }
 
-      redirectUrl = `https://${APP_HOST_URL}/menu?mId=${merchant._id}`;
+      redirectUrl = `https://app.${APP_HOST_URL}/menu?mId=${merchant._id}`;
     }
 
     const savedOtp = await OTPModel.findOne({

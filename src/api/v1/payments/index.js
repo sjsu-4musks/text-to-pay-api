@@ -107,7 +107,7 @@ router.post("/account", async (req, res) => {
         }
       );
 
-      const baseConnectReturnUrl = `https://${APP_HOST_URL}/connect/stripe`;
+      const baseConnectReturnUrl = `https://merchant.${APP_HOST_URL}/connect/stripe`;
 
       const createConnectAccountLinkResponse = await createConnectAccountLink({
         account: stripeAccountId,
@@ -175,7 +175,7 @@ router.get("/account/link", async (req, res) => {
         .json({ success: false, message: "Merchant does not exist." });
     }
 
-    const baseConnectReturnUrl = `https://${APP_HOST_URL}/connect/stripe`;
+    const baseConnectReturnUrl = `https://merchant.${APP_HOST_URL}/connect/stripe`;
 
     const response = await createConnectAccountLink({
       account: stripeAccountId,

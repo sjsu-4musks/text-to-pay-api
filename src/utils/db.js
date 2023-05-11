@@ -7,6 +7,7 @@ let cachedMongoConn = null;
 const connectDatabase = () => {
   return new Promise((resolve, reject) => {
     mongoose.Promise = global.Promise;
+    mongoose.set("strictQuery", false);
     mongoose.connection
       // Reject if an error occurred when trying to connect to MongoDB
       .on("error", error => {

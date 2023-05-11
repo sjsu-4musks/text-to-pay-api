@@ -201,7 +201,7 @@ router.post("/invite", async (req, res) => {
           }
         );
 
-        // const link = `https://${APP_HOST_URL}/signup?id=${merchant._id}&email=${member.email}`;
+        const link = `https://merchant.${APP_HOST_URL}/signup?id=${merchant._id}&email=${member.email}`;
 
         // await sendEmail({
         //   to: member.email,

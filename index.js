@@ -42,8 +42,12 @@ app.use(express.raw({ verify: rawBodySaver, type: "*/*", limit: "50mb" }));
 const whitelist = [
   "https://localhost:3000",
   "http://localhost:3000",
+  "https://merchant.localhost:3000",
+  "http://merchant.localhost:3000",
   "https://app.localhost:3000",
-  "http://app.localhost:3000"
+  "http://app.localhost:3000",
+  "https://merchant.getgranularity.com",
+  "https://app.getgranularity.com"
 ];
 
 app.use(
