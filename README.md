@@ -1,8 +1,8 @@
-### University Name: http://www.sjsu.edu/
+# SP23: CMPE-282 Sec 48 - Cloud Services
 
-### Course: [SP23: CMPE-282 Sec 48 - Cloud Services]
+University Name: **[San Jose State University](http://www.sjsu.edu)**
 
-### Team Members
+## Team Members
 
 Nihal Kaul [Linkedin](https://www.linkedin.com/in/nihalwashere)
 
@@ -11,15 +11,15 @@ Utsav Rawat [Linkedin](https://www.linkedin.com/in/utsav-rawat-a519aa131)
 Jaya Krishna Thupili [Linkedin](https://www.linkedin.com/in/thupili)
 
 Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
-   
-### Project Introduction
-    
-   The 'Text to Pay' project is an innovative venture that aims to revolutionize the way businesses handle transactions and interact with their customers. 
-   Recognizing the need for an effective and efficient way to facilitate payments, this project introduces a method that enables consumers to make payments via text messages. 
+
+## Project Introduction
+
+   The 'Text to Pay' project is an innovative venture that aims to revolutionize the way businesses handle transactions and interact with their customers.
+   Recognizing the need for an effective and efficient way to facilitate payments, this project introduces a method that enables consumers to make payments via text messages.
    The underlying goal of the 'Text to Pay' project is to streamline the payment process, improve customer engagement, and ultimately increase conversion rates and customer retention for businesses across various sectors.
 
+## Main objectives
 
-   ###### Main objectives:
     * Streamline Payments.
     * Improve Customer Engagement
     * Increase Conversion Rates
@@ -27,21 +27,7 @@ Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
     * Facilitate Onboarding of New Customers
     * Boost Security
 
-  
-        1. PROVIDER
-        * Register for services
-        * Accept requested appointments
-        * Cancel the requested appointments
-        * Update the Profile
-
-        2. CONSUMER
-        * Request for services
-        * Cancel scheduled services
-        * Rate the provider services
-        * Update the profile
-
-
-## Architect Diagram:
+## Architect Diagram
 
 ![](images/ArchitectDiagram.png)
 
@@ -49,22 +35,14 @@ Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
 
 ![](images/UMLDiagram.png)
 
-## [Project Board](https://trello.com/invite/b/a9uhsd3Z/cac9542dbbbb51d23d3ec2afe5f1bbce/cmpe282-cloudservices)
-We maintained a project board on trello and had bi-weekly sprint where we met daily to discuss on the task progress. This help in collaboration, communication, feedback, resolving blockers, resolving depencies etc.
+## [Project Board] TBD
 
-Sprint Backlog </br>
-![](cmpe282-projectBoard/sprintBacklog.PNG)
-Sprint Inprogress </br>
-![](cmpe282-projectBoard/sprintInprogress.PNG)
-Sprint InReview </br>
-![](cmpe282-projectBoard/sprintInReview.PNG)
-Sprint Completed </br>
-![](cmpe282-projectBoard/sprintComplete.PNG)
-### Pre-requisites Set Up:
+### Pre-requisites Set Up
 
-###### Frontend:
+###### Frontend
 
-Pre-requisites: 
+Pre-requisites:
+
 ```
 Node.js -Version 12 https://nodejs.org/en/
 
@@ -101,41 +79,51 @@ Server will be running on ‘http://localhost:4200’
     ```pip3 install -r requirements.txt```
 
     ```python3 flask_app.py```
-    
- ### AWS Configuration Screenshots
+
+### AWS Configuration Screenshots
 
 #### AWS Cognito
+
 ![](images/Cognito.png)
 
 #### AWS Amplify
+
 ![](images/amplify.png)
 
 #### AWS S3
+
 ![](images/S3.png)
 
 #### AWS CloudFront
+
 ![](images/CloudFront.png)
 
 #### AWS DynamoDB
+
 ![](images/DynamoDB.png)
 
-#### AWS Certificate Manager 
+#### AWS Certificate Manager
+
 ![](images/Certificate.jpeg)
 
 #### AWS Route53
+
 ![](images/Route53.jpeg)
 
-### Automate Deployment 
+### Automate Deployment
 
 #### Login Page
+
 ![](images/login.png)
 
 #### Jenkins Dashboard
+
 ![](images/dashboard1.png)
 
 ![](images/dashboard.png)
 
-#### Pipeline Configuration 
+#### Pipeline Configuration
+
 ![](images/pipeline1.png)
 
 ![](images/pipeline2.png)
@@ -144,10 +132,12 @@ Server will be running on ‘http://localhost:4200’
 
 ![](images/pipeline4.png)
 
-#### Build History 
+#### Build History
+
 ![](images/buildhistory.png)
 
-#### Console Output 
+#### Console Output
+
 ![](images/output1.png)
 
 ![](images/output2.png)
@@ -155,6 +145,7 @@ Server will be running on ‘http://localhost:4200’
 ![](images/output3.png)
 
 #### Git Webhook
+
 ![](images/gitwebhook.png)
 
 ![](images/webhook2.png)
@@ -162,28 +153,34 @@ Server will be running on ‘http://localhost:4200’
 ### Website Screenshots
 
 #### Login
+
 ![](WebsiteScreenshots/login.png)
 
 #### Customer Register
+
 ![](WebsiteScreenshots/register1.png)
 
 #### Provider Register
+
 ![](WebsiteScreenshots/register2.png)
 
 #### Customer Home Page(List of services)
+
 ![](WebsiteScreenshots/services.png)
 
 ![](WebsiteScreenshots/services2.png)
 
 #### Service Providers Page
+
 ![](WebsiteScreenshots/providerList.png)
 
 #### Book Appointment
+
 ![](WebsiteScreenshots/bookAppointment.png)
 
 #### Customer Appointments
-![](WebsiteScreenshots/customerAppointments1.png)
 
+![](WebsiteScreenshots/customerAppointments1.png)
 
 ![](WebsiteScreenshots/customerAppointments2.png)
 
@@ -192,332 +189,620 @@ Server will be running on ‘http://localhost:4200’
 ![](WebsiteScreenshots/review.png)
 
 #### Provider Reviews
+
 ![](WebsiteScreenshots/customerReviewSubmitted.png)
 
 #### Customer Edit Profile
+
 ![](WebsiteScreenshots/customerProfile.png)
 
 #### Provider Appointments
+
 ![](WebsiteScreenshots/providerAppointments.png)
 
 #### Provider Profile
+
 ![](WebsiteScreenshots/providerProfile.png)
 
+### _**Backend APIs Request and Response**_
 
-###### Backend APIs Request and Response
+1. New Merchant onboard
 
-* Create new user on terminal
+ ```[https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/onboard]```
 
+Add bearer token for request:
 ```
-    echo -n sampleuser@gmail.com:@SampleUser1234 | base64
+"request": 
+{
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "this-is-our-secret-key",
+				"type": "string"
+			}
+		]
+	},
+	"method": "POST",
+	"header": [],
+	"body": {
+		"mode": "raw",
+		"raw": "{\r\n    \"firstName\": \"jaya\",\r\n    \"lastName\": \"krishna\",\r\n    \"email\": \"jayakrishna.thupili@sjsu.edu\",\r\n    \"businessName\": \"Peets Coffee\"\r\n}",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	},
+	"url": {
+		"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/onboard",
+		"protocol": "https",
+		"host": [
+			"zj70v6aog3",
+			"execute-api",
+			"us-east-1",
+			"amazonaws",
+			"com"
+		],
+		"path": [
+			"prod",
+			"v1",
+			"merchant",
+			"onboard"
+		]
+	}
+}
 ```
-Output
-```
-c2FtcGxldXNlckBnbWFpbC5jb206QFNhbXBsZVVzZXIxMjM0
-```
-
-
-1. ```http://<host-name>/account/signin```
-
-    Request:
-        * Add Authorization Header as follows:
-        ```Authorization: Basic <Base64 username:password>```
-
-    Response:
-        ```{
-            "status": 200,
-            "success": false,
-            "data": {
-                    "accessToken": <access_token>,
-                    "profile":{
-                        <user profile data>
-                    }
-            }
-        }```
-
-2. ```http://<host-name>/account/signup```
-
-    Request:
-        * Add Authorization Header as follows:
-        ```Authorization: Basic <Base64 username:password>```
-        * Request Body
-            <Pass request body in json as discussed>
-
-
-3. ```http://<host-name>/account/signout```
-
-    Pass access token obtain while signing in as Bearer token in request header
-    Request:
-        * Add Authorization Header as follows:
-        ```Authorization: Bearer <access token>```
-
-4. ```http://<host-name>/account/delete/<usertype>```
-
-    Pass access token obtain while signing in as Bearer token in request header
-    Request:
-        * Add Authorization Header as follows:
-        ```Authorization: Bearer <access token>```
-
-    * Pass usertype in path parameter
-
-
-5. ```http://<host-name>/account/profile/<usertype>```
-
-    Request:
-        * Pass access token obtain while signing in as Bearer token in request header
-        * Pass usertype in path parameter
-        
-            * Add Authorization Header as follows:
-            ```Authorization: Bearer <access token>```
-        * Body: pass request body in json, make sure keyname are matching as discussed
     
 
-6. ```http://<host-name>/account/profile/<usertype>/upload```
-
-    Pass access token obtain while signing in as Bearer token in request header
-    Request:
-        * Add Authorization Header as follows:
-        ```Authorization: Bearer <access token>```
-
-    * Pass usertype in path parameter
-
-    * Pass image in Form data, and make sure file key name is ```profile_image```
-
-
-* Sample Provider Data
 ```
-{
-    "email": "david@gmail.com",
-    "userType": "provider",
-    "firstName": "David",
-    "lastName": "Jhon",
-    "address": "One Washington Square",
-    "area": "Downtown",
-    "city": "San Jose",
-    "phone": "+11234567890",
-    "time": "9:00AM-5:00PM",
-    "days": ["Monday", "Tuesday"],
-    "skillSet": [
-        {
-            "name": "Plumber",
-            "price": 500
-        }
-    ]
+"response": [
+    {
+	"name": "Merchant onboard",
+	"originalRequest": {
+		"method": "POST",
+		"header": [],
+		"body": {
+			"mode": "raw",
+			"raw": "{\r\n    \"firstName\": \"jaya\",\r\n    \"lastName\": \"krishna\",\r\n    \"email\": \"jayakrishna.thupili@sjsu.edu\",\r\n    \"businessName\": \"Peets Coffee\"\r\n}",
+			"options": {
+				"raw": {
+					"language": "json"
+				}
+			}
+		},
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/onboard",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"onboard"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"64615eab775481569b5337c9\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDI4Mjd9.StJK0PI_LGJmNl-_Yg4zQbt-URUhThrei2kWz8aIkxc\"\n    }\n}"
+}]
+```
+
+2. Merchant Setup
+
+ ```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/setup```
+
+```
+"request": {
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "this-is-our-secret-key",
+				"type": "string"
+			}
+		]
+	},
+	"method": "POST",
+	"header": [],
+	"body": {
+		"mode": "raw",
+		"raw": "{\"id\":\"6461505db11bacf31447bddb\"}",
+		"options": {
+			"raw": {
+				"language": "json"
+			}
+		}
+	},
+	"url": {
+		"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/setup",
+		"protocol": "https",
+		"host": [
+			"zj70v6aog3",
+			"execute-api",
+			"us-east-1",
+			"amazonaws",
+			"com"
+		],
+		"path": [
+			"prod",
+			"v1",
+			"merchant",
+			"setup"
+		]
+	}
 }
 ```
 
-* Sample Consumer Data
+```
+"response": [
+{
+	"name": "Merchant Setup",
+	"originalRequest": {
+		"method": "POST",
+		"header": [],
+		"body": {
+			"mode": "raw",
+			"raw": "{\"id\":\"6461505db11bacf31447bddb\"}",
+			"options": {
+				"raw": {
+					"language": "json"
+				}
+			}
+		},
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/setup",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"setup"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6461505db11bacf31447bddb\",\n            \"firstName\": \"jaya\",\n            \"lastName\": \"krishna\",\n            \"email\": \"jayakrishna.thupili@sjsu.edu\",\n            \"avatar\": \"e379afa006cbb724c93b8879364eba37\",\n            \"emailVerified\": false,\n            \"role\": \"ADMIN\",\n            \"status\": \"ACTIVE\",\n            \"type\": \"MERCHANT\",\n            \"address\": null,\n            \"merchant\": {\n                \"_id\": \"6461505db11bacf31447bdd8\",\n                \"stripeAccountId\": null,\n                \"stripeMetadata\": null,\n                \"squareMetadata\": null,\n                \"businessName\": \"Peets Coffee\",\n                \"subdomain\": null,\n                \"stripeEnabled\": false,\n                \"squareEnabled\": false,\n                \"productsSynced\": false,\n                \"ruleSetCreated\": false,\n                \"businessProfileCreated\": false,\n                \"businessPageViewed\": false,\n                \"processingFeesType\": \"MERCHANT\",\n                \"isB2B\": false,\n                \"createdAt\": \"2023-05-14T21:19:25.292Z\",\n                \"updatedAt\": \"2023-05-14T21:19:25.292Z\",\n                \"__v\": 0\n            },\n            \"customer\": null,\n            \"createdAt\": \"2023-05-14T21:19:25.345Z\",\n            \"updatedAt\": \"2023-05-14T21:19:25.345Z\",\n            \"__v\": 0\n        },\n        \"token\": \"<valueoftoken>\"\n    }\n}"
+}
+]
+```
+
+3. Create Product - Coffee
+
+```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products```
+
+Add x-access-token for request header:
 
 ```
-{
-    "email": "alina@gmail.com",
-    "userType": "consumer",
-    "firstName": "Alina",
-    "lastName": "Mccarthy",
-    "address": "One Washington Square",
-    "area": "Downtown",
-    "city": "San Jose",
-    "phone": "+11234567890"
+"request": {
+"method": "POST",
+"header": [
+	{
+		"key": "x-access-token",
+		"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+		"type": "default"
+	}
+],
+"body": {
+	"mode": "raw",
+	"raw": "{\r\n    \"title\": \"Coffee\",\r\n    \"description\": \"Latte\",\r\n    \"images\": [],\r\n    \"variations\": [\r\n        {\r\n            \"id\": \"#9Cjg1bWjpOhEaQwUk1R9K\",\r\n            \"name\": \"Regular\",\r\n            \"price\": 10\r\n        }\r\n    ],\r\n    \"timeUnits\": \"\",\r\n    \"timePeriod\": \"\"\r\n}",
+	"options": {
+		"raw": {
+			"language": "json"
+		}
+	}
+},
+"url": {
+	"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+	"protocol": "https",
+	"host": [
+		"zj70v6aog3",
+		"execute-api",
+		"us-east-1",
+		"amazonaws",
+		"com"
+	],
+	"path": [
+		"prod",
+		"v1",
+		"merchant",
+		"products"
+	]
+}
 }
 ```
 
-7. To get the list of providers based on the skillSet:
-   ``` http://127.0.0.1:5000/account/services ```
-   
-   API Request:
-   ```
-   Params:
-   skillSet=‘name of the service to be fetched’
-   
-   API Response:
+```
+"response": [
+{
+	"name": "Create Product - Coffee",
+	"originalRequest": {
+		"method": "POST",
+		"header": [
+			{
+				"key": "x-access-token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNTA1ZGIxMWJhY2YzMTQ0N2JkZGIiLCJpYXQiOjE2ODQwOTkxNjZ9.TmtD094KoYkOmd0-5tNFXlf0pNu5KINs08JoQeBKCXU",
+				"type": "default"
+			}
+		],
+		"body": {
+			"mode": "raw",
+			"raw": "{\r\n    \"title\": \"Coffee\",\r\n    \"description\": \"Latte\",\r\n    \"images\": [],\r\n    \"variations\": [\r\n        {\r\n            \"id\": \"#9Cjg1bWjpOhEaQwUk1R9K\",\r\n            \"name\": \"Regular\",\r\n            \"price\": 10\r\n        }\r\n    ],\r\n    \"timeUnits\": \"\",\r\n    \"timePeriod\": \"\"\r\n}",
+			"options": {
+				"raw": {
+					"language": "json"
+				}
+			}
+		},
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"products"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"message\": \"Product created successfully!\"\n}"
+}
+]
+```
+ 
+4. Get Products
 
-   [
-    {
-        "address": "Gunj circle",
-        "area": "The New palace",
-        "city": "Raichur",
-        "days": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-        ],
-        "email": "john.doe@mailinator.com",
-        "firstname": "John",
-        "image": "https://d2i70qtaco3lqu.cloudfront.net/maid.png",
-        "lastname": "Doe",
-        "phone": "+918796533222",
-        "price": "600",
-        "rating": "3.0",
-        "review": [
-            "The person did an amazing job and is very skilled in what he does",
-            "Below average work"
-        ],
-        "time": "10:00AM-05:00PM",
-        "uuid": "d3d6f4c9-9672-4937-bccf-bd19733cacb2"
-    },
-    {
-        "address": "Whitehouse",
-        "area": "MG Road",
-        "city": "Washington ",
-        "days": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-        ],
-        "email": "donald.trump@mailinator.com",
-        "firstname": "Donald",
-        "image": "None",
-        "lastname": "Trump",
-        "phone": "+919876543221",
-        "price": "200",
-        "rating": "4.0",
-        "review": [
-            "Not bad",
-            "Very Good"
-        ],
-        "time": "10:00AM-05:00PM",
-        "uuid": "c3b3b606-f1de-415b-b623-0740a4629e87"
-    }
-   ]
-   ```
+```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products```
 
-8. To book an appointment
-   ``` POST http://<hostname>/user/<userID>/appointments ```
-   ```
-    Request:
-      * Add Authorization Header as follows:
-      ```Authorization: Basic <Base64 username:password>```
-      * Request Body
-            <Pass request body in json>
-   API Response:  Response on the appointment booked success or failure
-   {
-      "Status": "success",
-	  "Message": "Successfully booked and appointment"
-   }
-   ```
-9. To update an appointment status
-   ``` PATCH http://<hostname>/users/<userID>/appointments/<appointmentID> ```
-   ```
-    Request: 
-      * Add Authorization Header as follows:
-      ```Authorization: Basic <Base64 username:password>```
-      * Request Body
-            {
-	       "status": "completed"
-	     }
-    Response:
-       {
-          "Status": "success",
-          "Message": "Successfully booked and appointment"
-       }
-   ```
-9. To rate and review an appointments
-   ``` PATCH http://<hostname>/users/<userID>/appointments/<appointmentID>/ratingAndReview ```
-   ```
-    Request:
-     * Add Authorization Header as follows:
-	  ```Authorization: Basic <Base64 username:password>```
-     * Request Body
-	 {
-           "rating": "3"
-           "review": "This person is very skilled at what he does"
-	 }
-    Response:
-     {
-	 "Status": "success"
-	 "Message": "Successfully rated and reviewed the appointment"
-     }
-   ```
-10. To get all the appointments booked by the provider:
-   ``` http://127.0.0.1:5000/user/userID/providerAppointments ```
-   
-   API Response: Will get the list of all the appointments booked by the provider.
-   
-   ```
-   [
-    {
-        "appointmentID": "924c3914-8d33-4142-a45e-9c4b41e85d0c",
-        "city": "gandinagar",
-        "customerAddress": "#23 2nd block,4th street,gandinagar 340021",
-        "customerEmail": "xyz@gmail.com",
-        "customerNumber": "+91 9823674512",
-        "customerUsername": "Vishnu",
-        "date": "13-Jan-2020",
-        "day": "Mon",
-        "rating": "6",
-        "review": "The electrician is good at his work",
-        "serviceType": "electrician",
-        "status": "upcoming",
-        "time": "09:15AM-11:30AM"
-    },
-    {
-        "appointmentID": "924c3914-8d33-4142-a45e-9c4b41e85gtc",
-        "city": "gandinagar",
-        "customerAddress": "#743 2nd block,4th street,Tnagar gandinagar 340001",
-        "customerEmail": "abc@gmail.com",
-        "customerNumber": "7234781290",
-        "customerUsername": "Bala",
-        "date": "13-Feb-2020",
-        "day": "Thr",
-        "rating": "5",
-        "review": "The electrician did an average work",
-        "serviceType": "electrician",
-        "status": "completed",
-        "time": "02:30PM-03:30PM"
-    },
-   ]   
-   ```
-11. To get all the appointments booked by the Consumer:
-   ``` http://127.0.0.1:5000/user/627userID/customerAppointments ```
-   
-   API Response: Will get the list of all the appointments booked by the Customer.
-   
-   ```
-   [
-    {
-        "appointmentID": "924c3914-8d33-4142-a45e-9c4b41e85d0c",
-        "city": "gandinagar",
-        "customerAddress": "#23 2nd block,4th street,gandinagar 340021",
-        "customerEmail": "xyz@gmail.com",
-        "customerNumber": "+91 9823674512",
-        "customerUsername": "Vishnu",
-        "date": "13-Jan-2020",
-        "day": "Mon",
-        "rating": "6",
-        "review": "The electrician is good at his work",
-        "serviceType": "electrician",
-        "status": "upcoming",
-        "time": "09:15AM-11:30AM"
-    },
-    {
-        "appointmentID": "924c3914-8d33-4142-a45e-9c4b41e85gtc",
-        "city": "gandinagar",
-        "customerAddress": "#743 2nd block,4th street,Tnagar gandinagar 340001",
-        "customerEmail": "abc@gmail.com",
-        "customerNumber": "7234781290",
-        "customerUsername": "Bala",
-        "date": "13-Feb-2020",
-        "day": "Thr",
-        "rating": "5",
-        "review": "The electrician did an average work",
-        "serviceType": "electrician",
-        "status": "completed",
-        "time": "02:30PM-03:30PM"
-    },
-   ]
-   ```
-# Text-to-Pay API
+```
+"request": {
+"method": "GET",
+"header": [
+	{
+		"key": "x-access-token",
+		"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+		"type": "default"
+	}
+],
+"url": {
+	"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+	"protocol": "https",
+	"host": [
+		"zj70v6aog3",
+		"execute-api",
+		"us-east-1",
+		"amazonaws",
+		"com"
+	],
+	"path": [
+		"prod",
+		"v1",
+		"merchant",
+		"products"
+	]
+}}
+```
 
-All things backend!
+```
+"response": [
+{
+	"name": "Get Products",
+	"originalRequest": {
+		"method": "GET",
+		"header": [
+			{
+				"key": "x-access-token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+				"type": "default"
+			}
+		],
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"products"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64616545789ab4c4225ffc63\",\n            \"stripeProductId\": null,\n            \"stripePriceId\": null,\n            \"stripeMetadata\": null,\n            \"squareItemId\": null,\n            \"squareMetadata\": null,\n            \"squareCategory\": null,\n            \"title\": \"Mocha Latte\",\n            \"description\": \"Flavored Coffee \",\n            \"images\": [],\n            \"variations\": [\n                {\n                    \"id\": \"#jirDfwtpg83MWVb8VqLCT\",\n                    \"name\": \"Regular\",\n                    \"price\": 8\n                }\n            ],\n            \"type\": \"PRODUCT\",\n            \"status\": \"UN_PUBLISHED\",\n            \"price\": null,\n            \"forCC\": false,\n            \"discountRule\": null,\n            \"timeUnits\": \"\",\n            \"timePeriod\": \"\",\n            \"modifiers\": [],\n            \"products\": [],\n            \"merchant\": {\n                \"_id\": \"64615eab775481569b5337c7\",\n                \"stripeAccountId\": null,\n                \"stripeMetadata\": null,\n                \"squareMetadata\": null,\n                \"businessName\": \"Peets Coffee\",\n                \"subdomain\": null,\n                \"stripeEnabled\": false,\n                \"squareEnabled\": false,\n                \"productsSynced\": false,\n                \"ruleSetCreated\": true,\n                \"businessProfileCreated\": false,\n                \"businessPageViewed\": false,\n                \"processingFeesType\": \"MERCHANT\",\n                \"isB2B\": false,\n                \"createdAt\": \"2023-05-14T22:20:27.282Z\",\n                \"updatedAt\": \"2023-05-14T22:48:37.557Z\",\n                \"__v\": 0\n            },\n            \"hidden\": false,\n            \"deleted\": false,\n            \"createdAt\": \"2023-05-14T22:48:37.518Z\",\n            \"updatedAt\": \"2023-05-14T22:48:37.518Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+}]
+```
+
+5. Create Discounts
+
+```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts```
+
+```
+"request": {
+"method": "POST",
+"header": [
+	{
+		"key": "x-access-token",
+		"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+		"type": "default"
+	}
+],
+"body": {
+	"mode": "raw",
+	"raw": "{\r\n    \"title\": \"20 % off\",\r\n    \"discountType\": \"PERCENTAGE\",\r\n    \"discountAmount\": \"10\",\r\n    \"discountSchedule\": {\r\n        \"startTime\": \"2023-05-14T22:49:25.671Z\",\r\n        \"endTime\": \"2023-05-15T06:59:59.999Z\"\r\n    },\r\n    \"products\": [\r\n        \"64616545789ab4c4225ffc63\"\r\n    ],\r\n    \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\"\r\n}",
+	"options": {
+		"raw": {
+			"language": "json"
+		}
+	}
+},
+"url": {
+	"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+	"protocol": "https",
+	"host": [
+		"zj70v6aog3",
+		"execute-api",
+		"us-east-1",
+		"amazonaws",
+		"com"
+	],
+	"path": [
+		"prod",
+		"v1",
+		"merchant",
+		"discounts"
+	]
+}}
+```
+
+```
+"response": [
+{
+	"name": "New Request",
+	"originalRequest": {
+		"method": "POST",
+		"header": [
+			{
+				"key": "x-access-token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+				"type": "default"
+			}
+		],
+		"body": {
+			"mode": "raw",
+			"raw": "{\r\n    \"title\": \"20 % off\",\r\n    \"discountType\": \"PERCENTAGE\",\r\n    \"discountAmount\": \"10\",\r\n    \"discountSchedule\": {\r\n        \"startTime\": \"2023-05-14T22:49:25.671Z\",\r\n        \"endTime\": \"2023-05-15T06:59:59.999Z\"\r\n    },\r\n    \"products\": [\r\n        \"64616545789ab4c4225ffc63\"\r\n    ],\r\n    \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\"\r\n}",
+			"options": {
+				"raw": {
+					"language": "json"
+				}
+			}
+		},
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"discounts"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"message\": \"Discount created successfully!\"\n}"
+}]
+```
+
+6. Get Discounts
+
+```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts```
+
+```
+"request": {
+"method": "GET",
+"header": [
+	{
+		"key": "x-access-token",
+		"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+		"type": "default"
+	}
+],
+"url": {
+	"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+	"protocol": "https",
+	"host": [
+		"zj70v6aog3",
+		"execute-api",
+		"us-east-1",
+		"amazonaws",
+		"com"
+	],
+	"path": [
+		"prod",
+		"v1",
+		"merchant",
+		"discounts"
+	]
+}}
+```
+
+```
+"response": [
+{
+	"name": "Get Discounts",
+	"originalRequest": {
+		"method": "GET",
+		"header": [
+			{
+				"key": "x-access-token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+				"type": "default"
+			}
+		],
+		"url": {
+			"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+			"protocol": "https",
+			"host": [
+				"zj70v6aog3",
+				"execute-api",
+				"us-east-1",
+				"amazonaws",
+				"com"
+			],
+			"path": [
+				"prod",
+				"v1",
+				"merchant",
+				"discounts"
+			]
+		}
+	},
+	"status": "OK",
+	"code": 200,
+	"_postman_previewlanguage": "json",
+	"header": ["..."],
+	"cookie": [],
+	"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64616636789ab4c4225ffc85\",\n            \"title\": \"10 % off\",\n            \"discountType\": \"PERCENTAGE\",\n            \"discountAmount\": 10,\n            \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 10% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\",\n            \"discountSchedule\": {\n                \"startTime\": \"2023-05-14T22:49:25.671Z\",\n                \"endTime\": \"2023-05-15T06:59:59.999Z\"\n            },\n            \"products\": [\n                \"64616545789ab4c4225ffc63\"\n            ],\n            \"merchant\": \"64615eab775481569b5337c7\",\n            \"createdAt\": \"2023-05-14T22:52:38.230Z\",\n            \"updatedAt\": \"2023-05-14T22:52:38.230Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646166a7789ab4c4225ffc8c\",\n            \"title\": \"20 % off\",\n            \"discountType\": \"PERCENTAGE\",\n            \"discountAmount\": 10,\n            \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\",\n            \"discountSchedule\": {\n                \"startTime\": \"2023-05-14T22:49:25.671Z\",\n                \"endTime\": \"2023-05-15T06:59:59.999Z\"\n            },\n            \"products\": [\n                \"64616545789ab4c4225ffc63\"\n            ],\n            \"merchant\": \"64615eab775481569b5337c7\",\n            \"createdAt\": \"2023-05-14T22:54:31.993Z\",\n            \"updatedAt\": \"2023-05-14T22:54:31.993Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+}]
+```
+
+7. Get Payment Methods
+
+```https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/payments/payment-methods/```
+
+```
+"request": {
+"method": "GET",
+"header": [
+	{
+		"key": "x-access-token",
+		"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNjdjMjc4OWFiNGM0MjI1ZmZjYTAiLCJpYXQiOjE2ODQxMDUxNTR9.QxP-uBM6AeXr7wVRj1GGq4S6GX7jzdx1_pVwbUbsTnM",
+		"type": "default"
+	}
+],
+"url": {
+	"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/payments/payment-methods/",
+	"protocol": "https",
+	"host": [
+		"zj70v6aog3",
+		"execute-api",
+		"us-east-1",
+		"amazonaws",
+		"com"
+	],
+	"path": [
+		"prod",
+		"v1",
+		"payments",
+		"payment-methods",
+		""
+	]
+}}
+```
+
+```
+"response": [
+{
+"name": "Payment Methods",
+"originalRequest": {
+	"method": "GET",
+	"header": [
+		{
+			"key": "x-access-token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNjdjMjc4OWFiNGM0MjI1ZmZjYTAiLCJpYXQiOjE2ODQxMDUxNTR9.QxP-uBM6AeXr7wVRj1GGq4S6GX7jzdx1_pVwbUbsTnM",
+			"type": "default"
+		}
+	],
+	"url": {
+		"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/payments/payment-methods/",
+		"protocol": "https",
+		"host": [
+			"zj70v6aog3",
+			"execute-api",
+			"us-east-1",
+			"amazonaws",
+			"com"
+		],
+		"path": [
+			"prod",
+			"v1",
+			"payments",
+			"payment-methods",
+			""
+		]
+	}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"header": ["..."],
+"cookie": [],
+"body": "{\n    \"success\": true,\n    \"data\": {\n        \"cards\": [\n            {\n                \"id\": \"pm_1N7ntRDxxxxxxxxxxxx\",\n                \"brand\": \"visa\",\n                \"expiryMonth\": 12,\n                \"expiryYear\": 2024,\n                \"lastFourDigits\": \"4242\"\n            }\n        ]\n    }\n}"
+}]
+```
 
 
-## Test Cases Postman
+## API Testing using Postman
 
-- **Create User**
+
+
+* **Create User**
 
 Postman:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/47d677a4-d026-4c76-9fe4-a81079aaee86)
@@ -525,16 +810,15 @@ Postman:
 MongoDB Atlas:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/f77473c3-7a3e-4932-ab35-f9a56fb4847f)
 
-- **Merchant Setup load**
+* **Merchant Setup load**
 
 Postman:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/97a1cf57-8620-4817-a7ea-4257db93ecfe)
 
-- **Create Product**
+* **Create Product**
 
 Postman:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/72ff4f5e-97b1-4686-b164-84b9e40ee14d)
 
 MongoDB Atlas:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/d98f7903-ff7a-4d44-aa16-a5f12a09634f)
-

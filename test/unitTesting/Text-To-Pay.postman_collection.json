@@ -47,7 +47,120 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Merchant onboard",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"jaya\",\r\n    \"lastName\": \"krishna\",\r\n    \"email\": \"jayakrishna.thupili@sjsu.edu\",\r\n    \"businessName\": \"Peets Coffee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/onboard",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"onboard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 22:20:27 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d4cf1d72-51ae-42a7-af1e-24ae675181e0"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "221"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "e96c3571-79d1-4c86-ab75-66e6135bfb31"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E7u6yFnYoAMFngw="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"dd-VuNeUcxQ4b1A+u8W6hXIKI/Aqik\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-64615eab-5fdb845c5cdaaa6b32d8ca38;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 22:20:27 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 0b2255558ecb54fb08d741c73c717f2a.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "-PgnVkfoVYHjE5MSTPwOoZLbMQml1GveOqYyY2QMma4N4hIAwOC3xA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"64615eab775481569b5337c9\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDI4Mjd9.StJK0PI_LGJmNl-_Yg4zQbt-URUhThrei2kWz8aIkxc\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Merchant Setup",
@@ -91,7 +204,120 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Merchant Setup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"6461505db11bacf31447bddb\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/setup",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"setup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "984"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 21:29:57 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "fd606e6d-15b8-4ecb-8f34-a7088a1582ad"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "984"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "72544e94-9b87-48e4-b503-4101c0781467"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E7nhUHc5IAMFetg="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"3d8-1GXlbgmzFA4ZqTPM3+FLZw+tH1g\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-646152d4-60a96fec3c20d5754d33fa63;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 21:29:57 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 07c8a21e4ac1622767bf9030500ce6b0.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "CqTQV1J5l_1iE8qx0Z70xKjCAJcZnH7NkSKqU2Nc6vnMkp3PFnOEkw=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6461505db11bacf31447bddb\",\n            \"firstName\": \"jaya\",\n            \"lastName\": \"krishna\",\n            \"email\": \"jayakrishna.thupili@sjsu.edu\",\n            \"avatar\": \"e379afa006cbb724c93b8879364eba37\",\n            \"emailVerified\": false,\n            \"role\": \"ADMIN\",\n            \"status\": \"ACTIVE\",\n            \"type\": \"MERCHANT\",\n            \"address\": null,\n            \"merchant\": {\n                \"_id\": \"6461505db11bacf31447bdd8\",\n                \"stripeAccountId\": null,\n                \"stripeMetadata\": null,\n                \"squareMetadata\": null,\n                \"businessName\": \"Peets Coffee\",\n                \"subdomain\": null,\n                \"stripeEnabled\": false,\n                \"squareEnabled\": false,\n                \"productsSynced\": false,\n                \"ruleSetCreated\": false,\n                \"businessProfileCreated\": false,\n                \"businessPageViewed\": false,\n                \"processingFeesType\": \"MERCHANT\",\n                \"isB2B\": false,\n                \"createdAt\": \"2023-05-14T21:19:25.292Z\",\n                \"updatedAt\": \"2023-05-14T21:19:25.292Z\",\n                \"__v\": 0\n            },\n            \"customer\": null,\n            \"createdAt\": \"2023-05-14T21:19:25.345Z\",\n            \"updatedAt\": \"2023-05-14T21:19:25.345Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNTA1ZGIxMWJhY2YzMTQ0N2JkZGIiLCJpYXQiOjE2ODQwOTk3OTd9.x9FKCcTMiwj2y0_kz2JTJCrZx7jaoUlnxdesvZJB_7k\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Create Product - Coffee",
@@ -141,7 +367,126 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Create Product - Coffee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNTA1ZGIxMWJhY2YzMTQ0N2JkZGIiLCJpYXQiOjE2ODQwOTkxNjZ9.TmtD094KoYkOmd0-5tNFXlf0pNu5KINs08JoQeBKCXU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Coffee\",\r\n    \"description\": \"Latte\",\r\n    \"images\": [],\r\n    \"variations\": [\r\n        {\r\n            \"id\": \"#9Cjg1bWjpOhEaQwUk1R9K\",\r\n            \"name\": \"Regular\",\r\n            \"price\": 10\r\n        }\r\n    ],\r\n    \"timeUnits\": \"\",\r\n    \"timePeriod\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 22:10:02 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "11e699e0-0f37-4930-bf2f-70fa69b77608"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "58"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "3ebea685-30f3-4367-8563-60398bde537b"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E7tY2EgOoAMFpBA="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"3a-bpK4eknjYdoIDbqcoOw1NcjgjFo\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-64615c38-3d3e3bef23685f4057faaa08;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 22:10:02 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 cb712125c0a106eae5fd0f1f475a2270.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "mtWjCUDVDe70Xre2tBTuvUnZU2GvzTgk4nkJENs7jIQbepuQZS_IsQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product created successfully!\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Products",
@@ -172,18 +517,279 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1035"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 22:52:06 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "f7c29739-d995-4173-8656-33f7caf4afef"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "1035"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "7425f489-1b7a-4ce2-b508-842a7ef404f2"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E7zjfHzmoAMFwVw="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"40b-FWHtmZpi9t+IlP378z7fqO/+/KI\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-64616616-509148106ed33d736b9a44fa;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 22:52:06 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 3b0761aae148df2a0aa43b804d13c402.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "sJH6ThWZTWLF1nuu-pdov4SZwSNy2QVf7bVVXJLqJThN5-lby9iJDg=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64616545789ab4c4225ffc63\",\n            \"stripeProductId\": null,\n            \"stripePriceId\": null,\n            \"stripeMetadata\": null,\n            \"squareItemId\": null,\n            \"squareMetadata\": null,\n            \"squareCategory\": null,\n            \"title\": \"Mocha Latte\",\n            \"description\": \"Flavored Coffee \",\n            \"images\": [],\n            \"variations\": [\n                {\n                    \"id\": \"#jirDfwtpg83MWVb8VqLCT\",\n                    \"name\": \"Regular\",\n                    \"price\": 8\n                }\n            ],\n            \"type\": \"PRODUCT\",\n            \"status\": \"UN_PUBLISHED\",\n            \"price\": null,\n            \"forCC\": false,\n            \"discountRule\": null,\n            \"timeUnits\": \"\",\n            \"timePeriod\": \"\",\n            \"modifiers\": [],\n            \"products\": [],\n            \"merchant\": {\n                \"_id\": \"64615eab775481569b5337c7\",\n                \"stripeAccountId\": null,\n                \"stripeMetadata\": null,\n                \"squareMetadata\": null,\n                \"businessName\": \"Peets Coffee\",\n                \"subdomain\": null,\n                \"stripeEnabled\": false,\n                \"squareEnabled\": false,\n                \"productsSynced\": false,\n                \"ruleSetCreated\": true,\n                \"businessProfileCreated\": false,\n                \"businessPageViewed\": false,\n                \"processingFeesType\": \"MERCHANT\",\n                \"isB2B\": false,\n                \"createdAt\": \"2023-05-14T22:20:27.282Z\",\n                \"updatedAt\": \"2023-05-14T22:48:37.557Z\",\n                \"__v\": 0\n            },\n            \"hidden\": false,\n            \"deleted\": false,\n            \"createdAt\": \"2023-05-14T22:48:37.518Z\",\n            \"updatedAt\": \"2023-05-14T22:48:37.518Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Discounts",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"20 % off\",\r\n    \"discountType\": \"PERCENTAGE\",\r\n    \"discountAmount\": \"10\",\r\n    \"discountSchedule\": {\r\n        \"startTime\": \"2023-05-14T22:49:25.671Z\",\r\n        \"endTime\": \"2023-05-15T06:59:59.999Z\"\r\n    },\r\n    \"products\": [\r\n        \"64616545789ab4c4225ffc63\"\r\n    ],\r\n    \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"discounts"
+					]
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"20 % off\",\r\n    \"discountType\": \"PERCENTAGE\",\r\n    \"discountAmount\": \"10\",\r\n    \"discountSchedule\": {\r\n        \"startTime\": \"2023-05-14T22:49:25.671Z\",\r\n        \"endTime\": \"2023-05-15T06:59:59.999Z\"\r\n    },\r\n    \"products\": [\r\n        \"64616545789ab4c4225ffc63\"\r\n    ],\r\n    \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"discounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 22:54:32 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "e56e5ccf-fd58-4421-822b-84fbea226cca"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "59"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "7c5ff621-ce9b-4471-bad8-82e6d3d96485"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E7z6SEINIAMF3Ag="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"3b-zNDFRMxLEKyA80I93RCpjdHUbvY\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-646166a7-3f203355190b5c6e54baa5dd;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 22:54:32 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 3b0761aae148df2a0aa43b804d13c402.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "f9z15zRYh8RgO9hOJoLTiOxBsYmXtvZAcIdT_xKo2qQcGosopNPziA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Discount created successfully!\"\n}"
+				}
+			]
 		},
 		{
-			"name": "Discounts",
+			"name": "Get Discounts",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -211,7 +817,117 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get Discounts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"merchant",
+								"discounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1067"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 23:04:42 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d6168f9b-0830-4170-b363-cc5e95196235"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "1067"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "f577b849-e422-4c26-8838-1683dafaf6f3"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E71ZwEVQoAMFrdA="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"42b-Gsl698QwwsQp/6+BhcP30Sh4DpA\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6461690a-405bd8e35cbb373a1e60ac52;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 23:04:42 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 c8c3180933886633be93f042334d6e12.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "yuHz94fzCjTHKI-9KSA6-nJWXjJ-Kd1Lswbsv6sapxv5FwkWztVnwQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"64616636789ab4c4225ffc85\",\n            \"title\": \"10 % off\",\n            \"discountType\": \"PERCENTAGE\",\n            \"discountAmount\": 10,\n            \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 10% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\",\n            \"discountSchedule\": {\n                \"startTime\": \"2023-05-14T22:49:25.671Z\",\n                \"endTime\": \"2023-05-15T06:59:59.999Z\"\n            },\n            \"products\": [\n                \"64616545789ab4c4225ffc63\"\n            ],\n            \"merchant\": \"64615eab775481569b5337c7\",\n            \"createdAt\": \"2023-05-14T22:52:38.230Z\",\n            \"updatedAt\": \"2023-05-14T22:52:38.230Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"646166a7789ab4c4225ffc8c\",\n            \"title\": \"20 % off\",\n            \"discountType\": \"PERCENTAGE\",\n            \"discountAmount\": 10,\n            \"message\": \"Hi Peets Coffee Crew! Till the end of the day, our members get 20% off Mocha Latte. How many would you like?\\n\\n1 for one\\n2 for two\\n3 for three\",\n            \"discountSchedule\": {\n                \"startTime\": \"2023-05-14T22:49:25.671Z\",\n                \"endTime\": \"2023-05-15T06:59:59.999Z\"\n            },\n            \"products\": [\n                \"64616545789ab4c4225ffc63\"\n            ],\n            \"merchant\": \"64615eab775481569b5337c7\",\n            \"createdAt\": \"2023-05-14T22:54:31.993Z\",\n            \"updatedAt\": \"2023-05-14T22:54:31.993Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Payment Methods",
@@ -243,7 +959,118 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Payment Methods",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNjdjMjc4OWFiNGM0MjI1ZmZjYTAiLCJpYXQiOjE2ODQxMDUxNTR9.QxP-uBM6AeXr7wVRj1GGq4S6GX7jzdx1_pVwbUbsTnM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/payments/payment-methods/",
+							"protocol": "https",
+							"host": [
+								"zj70v6aog3",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"v1",
+								"payments",
+								"payment-methods",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 14 May 2023 23:02:06 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "8c68cc2c-2972-4907-8e97-f8912ab39ba6"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "146"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-request-id",
+							"value": "fa35a713-5c05-41da-aaa7-127ce8055c77"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "E71BTGCboAMFQSg="
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"92-ajUROeOImzmFJzt+SYcHuGuDVIE\""
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "x-access-token"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6461686e-7ca548d379ad253722f484bb;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Sun, 14 May 2023 23:02:06 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 c8c3180933886633be93f042334d6e12.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SFO53-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "ucRMPhDxw3NhPMbXVD56d187Fi_mPRPtTX3TTw6wVoHQFNHhueeKng=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"cards\": [\n            {\n                \"id\": \"pm_1N7ntRDaGaAVxxxxxxxxxx\",\n                \"brand\": \"visa\",\n                \"expiryMonth\": 12,\n                \"expiryYear\": 2024,\n                \"lastFourDigits\": \"4242\"\n            }\n        ]\n    }\n}"
+				}
+			]
 		}
 	]
 }
