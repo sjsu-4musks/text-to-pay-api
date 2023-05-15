@@ -37,29 +37,28 @@ Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
 
 ## [Project Board] TBD
 
-### Pre-requisites Set Up
+-----
+---
 
-###### Frontend
+## Pre-requisites Set Up
 
-Pre-requisites:
+### Frontend
+
 
 ```
-Node.js -Version 12 https://nodejs.org/en/
+Node.js -Version 18 https://nodejs.org/en/
 
-Frontend Technologies: NPM,HTML, SCSS, Angular CLI, Angular 10, Angular-material, Bootstrap, JEST.
+Frontend Technologies: React.js
 
-To run Angular application in local:
+git clone https://github.com/sjsu-4musks/text-to-pay-app.git
+cd text-to-pay-app
+npm install -g @angular/cli
+npm start
 
-Run following commands in ‘/UI/hire-my-services/’ 
-
-1)npm install -g @angular/cli
-2)npm install
-2)ng serve
-
-Server will be running on ‘http://localhost:4200’ 
+Server will be running on ‘https://localhost:3000/’ 
 ```
 
-###### Backend APIs
+### Backend API
 
 * Requirements:
 
@@ -71,7 +70,7 @@ Server will be running on ‘http://localhost:4200’
 	APP_ENV=prod
 	MONGO_URL=mongodb+srv://cluster.7qvsti3.mongodb.net/text-to-pay?retryWrites=true&w=majority
 	JWT_SECRET_KEY=this-is-our-secret-key
-	APP_URL=merchant.getgranularity.com
+	APP_HOST_URL=localhost:3000
 	STRIPE_SECRET_KEY=
 	STRIPE_WEBHOOKS_SIGNING_SECRET=
 	AWS_ACCESS_KEY=
@@ -80,40 +79,50 @@ Server will be running on ‘http://localhost:4200’
 	TWILIO_AUTH_TOKEN=9bxxxxxxxxxxx
 	TWILIO_FROM_NUMBER=+1234567890
     ```
+    ```
+    git clone https://github.com/sjsu-4musks/text-to-pay-api.git
+    cd text-to-pay-api
+    node start
+    ```
+
 
 ### AWS Configuration Screenshots
 
-#### AWS Cognito
+#### AWS Codepipeline for CI/CD
 
-![](images/Cognito.png)
+![codepipeline](resources/AWS%20CodePipeline.jpeg)
 
-#### AWS Amplify
+#### AWS S3 Static web hosting
 
-![](images/amplify.png)
+![S3](resources/AWS%20S3.jpeg)
 
-#### AWS S3
+#### AWS CloudFront for caching
 
-![](images/S3.png)
+![CloudFront](resources/AWS%20CloudFront.jpeg)
 
-#### AWS CloudFront
+#### SSL Certificate for Secure Domain
 
-![](images/CloudFront.png)
+![AWS ACM](resources/AWS%20ACM%20Manager.jpeg)
 
-#### AWS DynamoDB
+![GoDaddy](resources/AWS%20GoDaddy%20DNS.jpeg)
 
-![](images/DynamoDB.png)
+#### SSL Certificate for Secure Domain
 
-#### AWS Certificate Manager
+![AWS ACM](resources/AWS%20ACM%20Manager.jpeg)
 
-![](images/Certificate.jpeg)
+### Payment Connectors and SMS Webhooks
 
-#### AWS Route53
+#### Stripe Payment
 
-![](images/Route53.jpeg)
+![Stripe](resources/Stripe%20Activity.jpeg)
 
-### Automate Deployment
+![Stripe](resources/Stripe%20Payments.jpeg)
 
-#### Login Page
+#### Twilio webhooks
+
+![Twilio](resources/Twilio%20Webhooks.jpeg)
+
+### Login Page
 
 ![](images/login.png)
 
