@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "f207ce30-17f5-42df-ba2a-95928aaf395f",
+		"name": "Text-To-Pay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Merchant onboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "this-is-our-secret-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"jaya\",\r\n    \"lastName\": \"krishna\",\r\n    \"email\": \"jayakrishna.thupili@sjsu.edu\",\r\n    \"businessName\": \"Peets Coffee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/onboard",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"onboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Merchant Setup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "this-is-our-secret-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"6461505db11bacf31447bddb\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/setup",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"setup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product - Coffee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "this-is-our-secret-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNTA1ZGIxMWJhY2YzMTQ0N2JkZGIiLCJpYXQiOjE2ODQwOTkxNjZ9.TmtD094KoYkOmd0-5tNFXlf0pNu5KINs08JoQeBKCXU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Coffee\",\r\n    \"description\": \"Latte\",\r\n    \"images\": [],\r\n    \"variations\": [\r\n        {\r\n            \"id\": \"#9Cjg1bWjpOhEaQwUk1R9K\",\r\n            \"name\": \"Regular\",\r\n            \"price\": 10\r\n        }\r\n    ],\r\n    \"timeUnits\": \"\",\r\n    \"timePeriod\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/products",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Discounts",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Discounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNWVhYjc3NTQ4MTU2OWI1MzM3YzkiLCJpYXQiOjE2ODQxMDQ0NTZ9.OGdxuInq9cgNxWYM7Hr1NzJzvyF8FQExEelaZDjD1Rk",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/merchant/discounts",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"merchant",
+						"discounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Methods",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYxNjdjMjc4OWFiNGM0MjI1ZmZjYTAiLCJpYXQiOjE2ODQxMDUxNTR9.QxP-uBM6AeXr7wVRj1GGq4S6GX7jzdx1_pVwbUbsTnM",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://zj70v6aog3.execute-api.us-east-1.amazonaws.com/prod/v1/payments/payment-methods/",
+					"protocol": "https",
+					"host": [
+						"zj70v6aog3",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"v1",
+						"payments",
+						"payment-methods",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
