@@ -29,21 +29,19 @@ Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
 
 ## Architect Diagram
 
-![](images/ArchitectDiagram.png)
+![Text-to-pay-Architecture_v2](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/91a61d7e-47d2-4e54-b7d8-32b3e32156c1)
 
-## UML Diagram
+## UML Class Diagram
 
-![](images/UMLDiagram.png)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/7818a8ee-0bad-419f-abb2-89ee232670b1)
 
-## [Project Board] TBD
+## Sequence Diagram
 
------
----
+![Use Case Sequence](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/4da8bf43-b2dd-4fa3-8cb6-f2a180a17995)
 
 ## Pre-requisites Set Up
 
 ### Frontend
-
 
 ```
 Node.js -Version 18 https://nodejs.org/en/
@@ -60,37 +58,42 @@ Server will be running on ‘https://localhost:3000/’
 
 ### Backend API
 
-* Requirements:
+set following environment variables values:
 
-    set following environment variables values:
-
-    ```
-	PORT=7000
-	LOG_LEVEL=debug
-	APP_ENV=prod
-	MONGO_URL=mongodb+srv://cluster.7qvsti3.mongodb.net/text-to-pay?retryWrites=true&w=majority
-	JWT_SECRET_KEY=this-is-our-secret-key
-	APP_HOST_URL=localhost:3000
-	STRIPE_SECRET_KEY=
-	STRIPE_WEBHOOKS_SIGNING_SECRET=
-	AWS_ACCESS_KEY=
-	AWS_SECRET_KEY=
-	TWILIO_ACCOUNT_SID=ACbxxxxxxxxxxxxxx
-	TWILIO_AUTH_TOKEN=9bxxxxxxxxxxx
-	TWILIO_FROM_NUMBER=+1234567890
-    ```
-    ```
-    git clone https://github.com/sjsu-4musks/text-to-pay-api.git
-    cd text-to-pay-api
-    node start
-    ```
-
+```
+PORT=7000
+LOG_LEVEL=debug
+APP_ENV=prod
+MONGO_URL=mongodb+srv://cluster.7qvsti3.mongodb.net/text-to-pay?retryWrites=true&w=majority
+JWT_SECRET_KEY=this-is-our-secret-key
+APP_HOST_URL=localhost:3000
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOKS_SIGNING_SECRET=
+AWS_ACCESS_KEY=
+AWS_SECRET_KEY=
+TWILIO_ACCOUNT_SID=ACbxxxxxxxxxxxxxx
+TWILIO_AUTH_TOKEN=9bxxxxxxxxxxx
+TWILIO_FROM_NUMBER=+1234567890
+```
+```
+git clone https://github.com/sjsu-4musks/text-to-pay-api.git
+cd text-to-pay-api
+node start
+```
 
 ### AWS Configuration Screenshots
 
 #### AWS Codepipeline for CI/CD
 
 ![codepipeline](resources/AWS%20CodePipeline.jpeg)
+
+#### Build History
+
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/b2ee218f-69c9-4692-b835-03facaa4f539)
+
+#### pipeline Git Webhook
+
+![Pipeline](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/1d5f1bec-91f0-4dcb-8dbd-42ff0f706aad)
 
 #### AWS S3 Static web hosting
 
@@ -122,49 +125,11 @@ Server will be running on ‘https://localhost:3000/’
 
 ![Twilio](resources/Twilio%20Webhooks.jpeg)
 
-### Login Page
-
-![](images/login.png)
-
-#### Jenkins Dashboard
-
-![](images/dashboard1.png)
-
-![](images/dashboard.png)
-
-#### Pipeline Configuration
-
-![](images/pipeline1.png)
-
-![](images/pipeline2.png)
-
-![](images/pipeline3.png)
-
-![](images/pipeline4.png)
-
-#### Build History
-
-![](images/buildhistory.png)
-
-#### Console Output
-
-![](images/output1.png)
-
-![](images/output2.png)
-
-![](images/output3.png)
-
-#### Git Webhook
-
-![](images/gitwebhook.png)
-
-![](images/webhook2.png)
-
 ### Website Screenshots
 
-#### Login
+### Login Page
 
-![](WebsiteScreenshots/login.png)
+![login](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/4956c3fe-2e82-4b53-be9b-602f6652ac1f)
 
 #### Customer Register
 
