@@ -10,7 +10,7 @@ Utsav Rawat [Linkedin](https://www.linkedin.com/in/utsav-rawat-a519aa131)
 
 Jaya Krishna Thupili [Linkedin](https://www.linkedin.com/in/thupili)
 
-Ninad Marathe [Linkedin](https://www.linkedin.com/in/thupili)
+Ninad Marathe [Linkedin](https://www.linkedin.com/in/ninadmarathe))
 
 ## Project Introduction
 
@@ -766,12 +766,10 @@ Add x-access-token for request header:
 
 ## API Testing using Postman
 
-
-
 * **Create User**
 
 Postman:
-![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/47d677a4-d026-4c76-9fe4-a81079aaee86)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/1444e50d-05a0-483b-9a07-a9bf065732a9)
 
 MongoDB Atlas:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/f77473c3-7a3e-4932-ab35-f9a56fb4847f)
@@ -779,12 +777,18 @@ MongoDB Atlas:
 * **Merchant Setup load**
 
 Postman:
-![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/97a1cf57-8620-4817-a7ea-4257db93ecfe)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/17efbbad-abf4-4b6d-9499-5cd10327141e)
 
 * **Create Product**
 
 Postman:
-![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/72ff4f5e-97b1-4686-b164-84b9e40ee14d)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/eb598fa4-9fa3-403b-b3b8-aab4d14ae5b6)
 
 MongoDB Atlas:
 ![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/d98f7903-ff7a-4d44-aa16-a5f12a09634f)
+
+* **Get Products**
+
+Postman:
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/5bc7cece-e707-4080-bdd3-b28dbd334747)
+
