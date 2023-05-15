@@ -66,19 +66,20 @@ Server will be running on ‘http://localhost:4200’
     set following environment variables values:
 
     ```
-    AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID", None)
-    AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY", None)
-    AWS_REGION = os.getenv("AWS_REGION", None)
-    COGNITO_USER_POOL_ID = os.getenv("COGNITO_USER_POOL_ID", None)
-    COGNITO_APP_CLIENT_ID = os.getenv("COGNITO_APP_CLIENT_ID", None)
-    S3_BUCKET = os.getenv("S3_BUCKET", None)
-    S3_URL = os.getenv("S3_BUCKET", None)
-    CLOUD_FRONT_URL = os.getenv("CLOUD_FRONT_URL", None)
+	PORT=7000
+	LOG_LEVEL=debug
+	APP_ENV=prod
+	MONGO_URL=mongodb+srv://cluster.7qvsti3.mongodb.net/text-to-pay?retryWrites=true&w=majority
+	JWT_SECRET_KEY=this-is-our-secret-key
+	APP_URL=merchant.getgranularity.com
+	STRIPE_SECRET_KEY=
+	STRIPE_WEBHOOKS_SIGNING_SECRET=
+	AWS_ACCESS_KEY=
+	AWS_SECRET_KEY=
+	TWILIO_ACCOUNT_SID=ACbxxxxxxxxxxxxxx
+	TWILIO_AUTH_TOKEN=9bxxxxxxxxxxx
+	TWILIO_FROM_NUMBER=+1234567890
     ```
-
-    ```pip3 install -r requirements.txt```
-
-    ```python3 flask_app.py```
 
 ### AWS Configuration Screenshots
 
