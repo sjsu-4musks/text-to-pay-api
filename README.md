@@ -127,57 +127,48 @@ node start
 
 ### Website Screenshots
 
-### Login Page
+#### Login Page
 
 ![login](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/4956c3fe-2e82-4b53-be9b-602f6652ac1f)
 
-#### Customer Register
+#### Dashboard
 
-![](WebsiteScreenshots/register1.png)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/b50d6133-cef5-4b99-a012-41746e5b86ff)
 
-#### Provider Register
+#### Create Products
 
-![](WebsiteScreenshots/register2.png)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/95ab24f8-4017-4abb-a43c-e22d6ce98590)
 
-#### Customer Home Page(List of services)
+#### Create Discounts
 
-![](WebsiteScreenshots/services.png)
+![image](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/1deb1ebf-714e-4f0a-b054-023f879e4499)
 
-![](WebsiteScreenshots/services2.png)
+#### Customer order selection via SMS
 
-#### Service Providers Page
+![SMS_ORDER1 (Small)](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/0a28cae6-8497-42d4-8329-05d0095843e1)
+![Order2](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/ac6fa310-9684-4bf3-973b-96ecee85b1e5)
+![Order3](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/9f0e9d8a-278d-4828-a12c-e3f022c20f8f)
 
-![](WebsiteScreenshots/providerList.png)
+#### Customer payment registration via Stripe
 
-#### Book Appointment
+![SMS_Stripe Registration](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/f3ae5668-4d64-4732-8043-0679b4b8f291)
+![SMS_Sripe_addCard](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/a254bbed-91b8-4dde-bda5-7f71e34077a6)
+![SMS_Sripe_addCard_Saved (Small)](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/f027201b-f6f4-465b-b776-83ff82053fba)
 
-![](WebsiteScreenshots/bookAppointment.png)
+#### Customer order payment via SMS
 
-#### Customer Appointments
+**Payment and order using SMS**
 
-![](WebsiteScreenshots/customerAppointments1.png)
+![Payment done and order placed](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/756f606f-38fb-4204-a959-fd33e6a74c30)
 
-![](WebsiteScreenshots/customerAppointments2.png)
+#### Order alert on merchant page
 
-#### Review Provider
+![Site_alerts](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/b0166db9-01af-4299-ae7c-d50e16a46f6a)
 
-![](WebsiteScreenshots/review.png)
+#### Customer Details
 
-#### Provider Reviews
+![Site_Customers](https://github.com/sjsu-4musks/text-to-pay-api/assets/111621706/6603d878-4f3f-440d-a1d5-3fbf03c776a9)
 
-![](WebsiteScreenshots/customerReviewSubmitted.png)
-
-#### Customer Edit Profile
-
-![](WebsiteScreenshots/customerProfile.png)
-
-#### Provider Appointments
-
-![](WebsiteScreenshots/providerAppointments.png)
-
-#### Provider Profile
-
-![](WebsiteScreenshots/providerProfile.png)
 
 ### _**Backend APIs Request and Response**_
 
